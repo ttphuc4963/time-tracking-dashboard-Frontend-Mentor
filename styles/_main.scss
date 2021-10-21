@@ -1,0 +1,165 @@
+body{
+    background-color: $very-dark-blue;
+}
+
+$card-width: 87%;
+$card-border-radius: 1.4rem;
+
+.container{
+    display: flex;
+    margin: 5rem auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2.5rem;
+}
+
+.menu-card{
+    width: $card-width;
+    background-color: $dark-blue;
+    border-radius: $card-border-radius;
+}
+
+.card-report{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $blue;
+    padding: 3rem;
+    border-radius: calc(#{$card-border-radius} - 0.2rem);
+    gap: 1.8rem;
+    img{
+        width: 26%;
+        border: 2.6px solid white;
+        border-radius: 50%;
+        background-color:white;
+    }
+
+    .report{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0.4rem;
+
+        p{
+            font-size: 1.5rem;
+            color: $pale-blue;
+        }
+
+        div{
+            font-size: 2.4rem;
+            font-weight: 300;
+            color:white;
+        }
+    }
+    
+}
+
+.menu{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: $desaturated-blue;
+    padding: 2.5rem;
+    
+    .menu-link{
+        font-size: 1.8rem;
+        font-weight: 300;
+        cursor: pointer;
+    }
+
+    .menu-active{
+        color: white;
+    }
+    
+}
+
+.regular-card{
+    width: $card-width;
+    background-repeat: no-repeat;
+    background-position: 92% -1rem;
+    border-radius: $card-border-radius;
+    padding-top: 10%;
+}
+
+.property-card{
+    background-color: $dark-blue;
+    border-radius: calc(#{$card-border-radius} - 0.2rem);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    .top{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .title{
+            color: white;
+            font-weight: 500;
+            font-size:1.8rem;
+        }
+        .dots{
+            .dot{
+                border: 0.25rem solid $pale-blue;
+                display: inline-block;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .bottom{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .hours{
+            color: white;
+            font-size: 3.2rem;
+            font-weight: 300;
+        }
+        .description{
+            color: $pale-blue;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.work{
+    background-color: $work;
+    background-image: url(../images/icon-work.svg);
+}
+
+.play{
+    background-color: $play;
+    background-image: url(../images/icon-play.svg);
+}
+
+.study{
+    background-color: $study;
+    background-image: url(../images/icon-study.svg);
+}
+
+.exercise{
+    background-color: $exercise;
+    background-image: url(../images/icon-exercise.svg);
+}
+
+.social{
+    background-color: $social;
+    background-image: url(../images/icon-social.svg);
+}
+
+.social{
+    background-color: $social;
+    background-image: url(../images/icon-social.svg);
+}
+
+.self-care{
+    background-color: $self-care;
+    background-image: url(../images/icon-self-care.svg);
+}
