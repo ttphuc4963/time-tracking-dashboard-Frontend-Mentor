@@ -2,10 +2,10 @@ body{
     background-color: $very-dark-blue;
 }
 
-$card-width: 87%;
 $card-border-radius: 1.4rem;
 
 .container{
+    width: 88%;
     display: flex;
     margin: 5rem auto;
     flex-direction: column;
@@ -15,7 +15,7 @@ $card-border-radius: 1.4rem;
 }
 
 .menu-card{
-    width: $card-width;
+    width: 100%;
     background-color: $dark-blue;
     border-radius: $card-border-radius;
 }
@@ -31,6 +31,7 @@ $card-border-radius: 1.4rem;
     gap: 1.8rem;
     img{
         width: 26%;
+        max-width: 140px;
         border: 2.6px solid white;
         border-radius: 50%;
         background-color:white;
@@ -69,6 +70,9 @@ $card-border-radius: 1.4rem;
         font-size: 1.8rem;
         font-weight: 300;
         cursor: pointer;
+        &:hover{
+            color: white;
+        }
     }
 
     .menu-active{
@@ -78,7 +82,7 @@ $card-border-radius: 1.4rem;
 }
 
 .regular-card{
-    width: $card-width;
+    width: 100%;
     background-repeat: no-repeat;
     background-position: 92% -1rem;
     border-radius: $card-border-radius;
@@ -86,6 +90,7 @@ $card-border-radius: 1.4rem;
 }
 
 .property-card{
+    position: relative;
     background-color: $dark-blue;
     border-radius: calc(#{$card-border-radius} - 0.2rem);
     padding: 2.5rem;
@@ -93,6 +98,10 @@ $card-border-radius: 1.4rem;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+    cursor: pointer;
+    &:hover{
+        background-color: $card-hover;
+    }
     .top{
         display: flex;
         flex-direction: row;
@@ -102,17 +111,46 @@ $card-border-radius: 1.4rem;
             color: white;
             font-weight: 500;
             font-size:1.8rem;
+            z-index:98;
         }
         .dots{
+            display: flex;
+            gap: 0.3rem;
+            
+            &:hover{
+                .dot{
+                border-color: white;
+                z-index: 99;
+                }
+            }
+            &:before{
+                content:'';
+                background-color: pink;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                // opacity: 0.5;
+                border-radius: calc(#{$card-border-radius} - 0.2rem);
+                display:none;
+                z-index: 1;
+                
+            }
+            &:hover::before{
+                background-color: $dark-blue;
+                display: block; 
+            }
             .dot{
+                z-index: 99;
                 border: 0.25rem solid $pale-blue;
-                display: inline-block;
-                border-radius: 50%;
+                border-radius: 50%;   
             }
         }
     }
 
     .bottom{
+        z-index: 97;
         display: flex;
         flex-direction: row;
         align-items: center;
